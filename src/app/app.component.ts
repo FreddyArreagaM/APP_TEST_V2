@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'APP_TEST_V2';
+  nombre = 'Freddy Arreaga';
+
+  constructor(){
+    setInterval( () => this.nombre = 'Eren Jaeger', 3000);
+  }
 }
