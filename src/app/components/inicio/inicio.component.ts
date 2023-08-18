@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+  error=false;
+  pin = '';
+
+  constructor(){}
+
+  agregar(){
+    if(this.pin==""){
+      this.error=true;
+      setTimeout( ()=>{
+        this.error=false;
+      },3000)
+
+    }
+  }
 
 }
