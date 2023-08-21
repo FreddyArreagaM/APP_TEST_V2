@@ -14,3 +14,8 @@ body{
     font-family: 'Montserrat';
     font-weight: bold;
 }
+
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
