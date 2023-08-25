@@ -1,27 +1,11 @@
 # APPTESTV2
+![webdev](https://github.com/FreddyArreagaM/APP_TEST_V2/assets/127709400/50f51eb4-6ec1-4c3f-9f36-f3d6aaa3f481)
+![image](https://github.com/FreddyArreagaM/APP_TEST_V2/assets/127709400/b261d58c-7ca7-4aa2-9e85-0dad26232516)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
-## Development server
+# Arquitectura
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![image](https://github.com/FreddyArreagaM/APP_TEST_V2/assets/127709400/59cdf0b0-f4e7-4faf-95f7-9599c1dc17b6)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
