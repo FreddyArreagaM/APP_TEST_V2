@@ -5,7 +5,8 @@
 
 # Arquitectura
 
-![image](https://github.com/FreddyArreagaM/APP_TEST_V2/assets/127709400/59cdf0b0-f4e7-4faf-95f7-9599c1dc17b6)
+![image](https://github.com/FreddyArreagaM/APP_TEST_V2/assets/127709400/98487fa7-89d5-4770-beb9-97f0f0774f75)
+
 
 
 
