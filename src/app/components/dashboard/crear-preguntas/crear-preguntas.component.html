@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row mt-3 mb-5">
+        <div class="col-lg-8 offset-lg-2">
+            <form [formGroup]="addPreguntaForm" (ngSubmit)="agregar()"> 
+                <input type="text" class="form-control form-control-lg inputPregunta" placeholder="INGRESE PREGUNTA" maxlength="150" formControlName="titulo">
+                <!-- Fila para los item SEGUNDOS Y CANTIDAD DE PUNTOS -->
+                <div class="row mt-5">
+                    <div class="col-lg-6 text-center">
+                        <div class="fondo-item">
+                            <p class="title">SEGUNDOS</p>
+                            <p class="value">{{seg}}</p>
+                            <div>
+                                <i class="fa-solid fa-minus" (click)="validate()"></i>
+                                <i class="fa-solid fa-plus" (click)="calcular(+1)"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="fondo-item">
+                            <p class="title">PUNTOS</p>
+                            <p class="value">{{puntos}}</p>
+                            <input type="range" class="form-range" min="0" max="2000" formControlName="puntos">
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Respuestas-->
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <div formGroupName="respuesta1" class="input-group">
+                            <input type="text" class="form-control inputRespuesta" placeholder="Agregar respuesta 1" formControlName="titulo">
+                            <div (click)="esCorrecta('1')" class="input-group-text">
+                                <i class="fa-regular fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div formGroupName="respuesta2" class="input-group">
+                            <input type="text" class="form-control inputRespuesta" placeholder="Agregar respuesta 2" formControlName="titulo">
+                            <div (click)="esCorrecta('2')" class="input-group-text">
+                                <i class="fa-regular fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Respuestas-->
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <div formGroupName="respuesta3" class="input-group">
+                            <input type="text" class="form-control inputRespuesta" placeholder="Agregar respuesta 3 (opcional)" formControlName="titulo">
+                            <div (click)="esCorrecta('3')" class="input-group-text">
+                                <i class="fa-regular fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div formGroupName="respuesta4" class="input-group">
+                            <input type="text" class="form-control inputRespuesta" placeholder="Agregar respuesta 4 (opcional)" formControlName="titulo">
+                            <div (click)="esCorrecta('4')" class="input-group-text">
+                                <i class="fa-regular fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <button class="btn-principal">AGREGAR PREGUNTA</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

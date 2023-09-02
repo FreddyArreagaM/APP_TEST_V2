@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { user } from 'src/app/interfaces/user';
 import { ErrorService } from 'src/app/services/error.service';
 
 @Component({
@@ -30,6 +31,8 @@ export class LoginComponent implements OnInit{
     const pass = this.loginForm.get('password')?.value;
 
     this.loading = true;
+
+    //Metodo para iniciar sesion mediante email and password en firebase
     this.auth.signInWithEmailAndPassword(user,pass).then( result=>{
 
       if(result.user?.emailVerified == false){
@@ -37,8 +40,12 @@ export class LoginComponent implements OnInit{
       }else{
         if(result.user?.emailVerified == true){
           //Etiqueta de mensaje login extioso
-          this.toastr.success('Ingreso exitoso', 'Benvenido al Sistema');
+          this.toastr.success('Ingreso exitoso', 'Bienvenido al Quizz');
           //this.loading = false;
+          this.router.navigate(['/dashboard']);
+
+          //Enviamos los datos del user a LocalStorage para tener su inicio de sesion
+          this.setLocalStorage(result.user);
         }
       }      
     }, error => {
@@ -48,5 +55,16 @@ export class LoginComponent implements OnInit{
       this.loginForm.reset;
     })
 
+  }
+
+  //Envío de los datos del usuario que inició sesion para guardar su user y así
+  // utilizarlo en futuros componentes
+  setLocalStorage(user: any){
+    const usuario: user ={
+      uid:user.uid,
+      email: user.email
+    }
+    //Envío de los datos usando estructura JSON
+    localStorage.setItem('user', JSON.stringify(usuario));
   }
 }

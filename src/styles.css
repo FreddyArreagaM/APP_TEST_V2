@@ -19,3 +19,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+
+.card-titulo{
+    padding: 0px 22px;
+}
