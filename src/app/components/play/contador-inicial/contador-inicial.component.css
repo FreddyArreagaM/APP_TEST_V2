@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: center; /* Alinear los elementos al centro */
+    align-items: center; /* Alinear verticalmente al centro */
+    flex-direction: column; /* Centrar un elemento debajo del otro */
+    height: 100vh; /* Ocupe el 100% de la pantalla el contenedor */
+}
+
+.contador{
+    font-size: 200px;
+}
