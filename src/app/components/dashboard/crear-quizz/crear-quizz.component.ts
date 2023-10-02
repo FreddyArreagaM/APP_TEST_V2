@@ -21,6 +21,7 @@ export class CrearQuizzComponent implements OnInit{
     })
   }
 
+  //Metodo para ir al siguiente componente
   next(){
     //Validamos si el formulario se encuentra invalido
     if(this.cuestionarioForm.invalid){ 

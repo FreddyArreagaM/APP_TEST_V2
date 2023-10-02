@@ -26,12 +26,14 @@ export class RegisterComponent implements OnInit{
     
   }
 
+  //Metodo para validar que las contraseñas sean iguales
   checkPassword(group: FormGroup): any{
     const pass = group.controls['password']?.value;
     const repass = group.controls['repassword']?.value;
     return pass === repass ? null : {notSame: true}
   }
 
+  //Metodo para registrar el usuario en firebase 
   registrar(){
     const user = this.registerForm.get('usuario')?.value;
     const pass = this.registerForm.get('password')?.value;

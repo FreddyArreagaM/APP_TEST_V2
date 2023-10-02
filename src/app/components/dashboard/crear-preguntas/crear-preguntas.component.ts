@@ -39,8 +39,7 @@ export class CrearPreguntasComponent implements OnInit{
   }
 
   ngOnInit(): void{
-    console.log('Titulo:' ,this._quizzService.tituloQuizz);
-    console.log('Descripcion:', this._quizzService.descripcion);
+
   }
 
   //Metodo get para obtener segundos

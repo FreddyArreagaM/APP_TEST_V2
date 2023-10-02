@@ -20,6 +20,7 @@ export class RecuperarPasswordComponent {
     })
   }
 
+  //Metodo para enviar email de recuperación de password
   recuperarPassword(){
     // Obtener el correo digitado
     const correo = this.recuperarForm.get('usuario')?.value;

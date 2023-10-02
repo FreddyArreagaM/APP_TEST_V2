@@ -20,6 +20,7 @@ export class ContadorInicialComponent implements OnInit, OnDestroy{
     clearInterval(this.interval);
   }
 
+  //Metodo para iniciar el contador de inicio 
   playContador(){
     this.interval = setInterval(()=>{
       if(this.contador > 0 ){

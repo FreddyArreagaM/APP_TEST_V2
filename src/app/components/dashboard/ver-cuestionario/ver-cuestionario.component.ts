@@ -21,11 +21,10 @@ export class VerCuestionarioComponent implements OnInit{
     this.obtenerQuizz();
   }
 
+  //Metodo para obtener cuestionario
   obtenerQuizz(){
     this.loading = true;
     this._quizz.getCuestionarioById(this.id).subscribe(doc=>{
-
-      console.log(doc.data());
       this.cuestionario = doc.data();
       this.loading = false;
     }, error =>{

@@ -18,6 +18,7 @@ export class IngresarNombreComponent implements OnInit{
     this.validarRefresh();
   }
 
+  //Metodo para guardar el nombre del participante en el Service
   ingresarNombre(){
     if(this.nombre === ''){
       this.errorMensaje('Ingrese un Nombre');
@@ -29,6 +30,7 @@ export class IngresarNombreComponent implements OnInit{
     }
   }
 
+  //Metodo para validar si el usuario refrescó la pagina 
   validarRefresh(){
     if(this._respuestSer.cuestionario === undefined){
       this._router.navigate(['/']);

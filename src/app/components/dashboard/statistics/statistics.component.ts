@@ -17,7 +17,6 @@ export class StatisticsComponent implements OnInit, OnDestroy{
 
   constructor(private _respuestaService: RespuestaQuizzService, private aRoute: ActivatedRoute, private _toastr: ToastrService){
     this.id = this.aRoute.snapshot.paramMap.get('id')!;
-    console.log(this.id);
   }
 
   ngOnInit(): void {
@@ -40,16 +39,15 @@ export class StatisticsComponent implements OnInit, OnDestroy{
           ...element.payload.doc.data()
         })    
       });
-
-      console.log(this.listRespuestasUsuario);
     }, error =>{
       console.log(error);
     })
   }
 
+  //Metodo para eliminar la respuesta del usuario
   eliminarRespuestaUser(id: string){
     this.loading = true;
-    this._respuestaService.deleteRespuestaByIdUser(this.id).then(()=>{
+    this._respuestaService.deleteRespuestaByIdUser(id).then(()=>{
       this.loading = false;
       this._toastr.info('La respuesta fue eliminada', 'Respuesta Eliminada');
     }, error =>{

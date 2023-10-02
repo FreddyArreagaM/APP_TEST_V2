@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit{
     
   }
 
+  //Metodo para iniciar sesion con usuario y contraseña
   login(){
     const user = this.loginForm.get('usuario')?.value;
     const pass = this.loginForm.get('password')?.value;

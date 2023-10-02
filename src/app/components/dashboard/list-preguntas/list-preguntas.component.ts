@@ -21,7 +21,6 @@ export class ListPreguntasComponent implements OnInit{
   constructor(private _quizzService: QuizzService, private router: Router, private _toastr: ToastrService){
     this._quizzService.getPreguntas().subscribe(data=>{
       this.listPreguntas.push(data);
-      console.log(this.listPreguntas);
     })
     this.tituloCuestionario = this._quizzService.tituloQuizz;
     this.descripcionCuestionario = this._quizzService.descripcion;
@@ -37,6 +36,7 @@ export class ListPreguntasComponent implements OnInit{
     this.listPreguntas.splice(index,1);
   }
 
+  //Metodo para finalizar la creación del quizz y agregarlo a firebase
   finalizar(){
     const codigo = this.generarCodigo();
 
@@ -53,7 +53,6 @@ export class ListPreguntasComponent implements OnInit{
       listaPreguntas: this.listPreguntas
     }
     this.loading = true;
-    console.log(cuestionario);
     this._quizzService.addCuestionario(cuestionario).then(data=>{
       this._toastr.success('Registro exitoso!', 'Cuestionario Registrado');
       this.router.navigate(['/dashboard']);

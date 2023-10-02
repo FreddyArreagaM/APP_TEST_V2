@@ -165,6 +165,7 @@ export class RealizarQuizzComponent implements OnInit, OnDestroy{
     }
   }
 
+  //Metodo para obtener el indice de la respuesta seleccionada
   getIndexRespuesta(): any{
     //Validamos si el usuario seleccionó una respuesta
     if(this.opcionSeleccionada === undefined){
@@ -205,7 +206,6 @@ export class RealizarQuizzComponent implements OnInit, OnDestroy{
     this.loading = true;
     //Almacenamos la respuesta en firebase
     this._respuestaQuizz.setRespuestaUsuario(respuestaCuestionario).then(data=>{
-      console.log(data);
 
       //redireccionamos al proximo componente
       this._router.navigate(['/jugar/respuestas', data.id]);

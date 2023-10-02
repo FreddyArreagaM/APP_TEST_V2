@@ -13,6 +13,7 @@ export class NavbarComponent {
 
   }
 
+  //Metodo para cerrar sesion
   logOut(){
     this.afAuth.signOut();
     localStorage.removeItem('user')
