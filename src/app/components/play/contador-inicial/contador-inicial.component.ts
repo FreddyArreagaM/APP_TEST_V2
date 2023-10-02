@@ -22,12 +22,11 @@ export class ContadorInicialComponent implements OnInit, OnDestroy{
 
   playContador(){
     this.interval = setInterval(()=>{
-      console.log("hola ")
       if(this.contador > 0 ){
         this.contador = this.contador - 1;
       }else{
         if(this.contador == 0){
-          this._router.navigate(['/jugar/realizarQuizz'])
+          this._router.navigate(['/jugar/Quizz'])
         }
       }
     },1000);

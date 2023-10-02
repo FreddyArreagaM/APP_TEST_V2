@@ -3,10 +3,12 @@
 }
 
 .list-group-item{
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color:black;
-    cursor:pointer;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
 }
 
 .classSeleccionada{
@@ -17,4 +19,8 @@
 .btn-aceptar{
     width: 100%;
     font-size: 20px;
+}
+
+.btn-aceptar:hover{
+    color: white;
 }

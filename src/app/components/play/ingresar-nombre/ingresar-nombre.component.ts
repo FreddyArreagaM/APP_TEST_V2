@@ -25,7 +25,7 @@ export class IngresarNombreComponent implements OnInit{
       //Guardamos el nombre en el servicio para luego utilizarlo en otro componente
       this._respuestSer.nombreParticipante = this.nombre;
       //Redireccionamos al nuevo componente al usuario
-      this._router.navigate(['/jugar/iniciarContador']);
+      this._router.navigate(['/jugar/iniciar']);
     }
   }
 

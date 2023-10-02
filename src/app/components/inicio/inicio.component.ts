@@ -43,7 +43,6 @@ export class InicioComponent implements OnInit, OnDestroy{
               id: element.id,
               ...element.data()
             }
-            console.log(cuestionario);
             //Almacenamos los datos del cuestionario dentro de una variable cuestionario en el servicio para acceder a el luego 
             //por medio de otro componente.
             this._respuestaSer.cuestionario = cuestionario;

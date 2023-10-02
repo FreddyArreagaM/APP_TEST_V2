@@ -1,18 +1,22 @@
-<div class="container mt-3">
+<div *ngIf="loading" class="contenedor">
+    <app-spinner></app-spinner>
+</div>
+
+<div *ngIf="!loading" class="container mt-3">
     <div class="d-flex justify-content-center mt-3">
-        <h1 class="titulo contadorPregunta">12</h1>
+        <h1 class="titulo contadorPregunta">{{getSegundos()}}</h1>
     </div>
     <div class="row mt-2">
         <div class="text-center">
-            <h3 class="titulo">CUAL ES LA CAPITAL DE ARGENTINA?</h3>
+            <h3 class="titulo">{{getTitulo()}}</h3>
             <div class="col-lg-6 offset-lg-3">
                 <ul class="list-group mt-3">
-                    <li class="list-group-item">LIMA</li>
-                    <li class="list-group-item classSeleccionada">Buenos Aires </li>
-                    <li class="list-group-item">Quito</li>
-                    <li class="list-group-item">Caracas</li>
+                    <li *ngFor="let respuesta of cuestionario.listaPreguntas[indexPregunta].listadoRespuestas; let i=index" class="list-group-item animate__animated animate__fadeIn"
+                    (click)="respuestaSeleccionada(respuesta, i)" [ngClass]="selection(respuesta)">
+                        {{respuesta.descripcion}}
+                    </li>
                 </ul>
-                <button class="btn-principal mt-3 btn-aceptar">ACEPTAR</button>
+                <button (click)="siguiente()" [disabled]="opcionSeleccionada == null" [ngStyle]="{'opacity': opcionSeleccionada == null ? '0.7' : '1'}" class="btn-principal mt-3 btn-aceptar">ACEPTAR</button>
             </div>
         </div>
     </div>

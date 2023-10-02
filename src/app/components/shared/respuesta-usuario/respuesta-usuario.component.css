@@ -1,0 +1,18 @@
+.list-group-item{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.classCorrecta{
+    background-color: #198754;
+    color: white;
+}
+
+.classIncorrecta{
+    background-color: #dc3545;
+    color: white;
+}
